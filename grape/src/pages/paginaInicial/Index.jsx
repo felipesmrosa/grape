@@ -28,21 +28,23 @@ export function PaginaInicial() {
 
         <div className="jogos__grid">
           {jogos.map((jogo, index) => (
-            <div
-              className={`jogos__card ${
-                jogo.emBreve ? "jogos__card--embreve" : ""
-              }`}
-              key={index}
-              style={{ backgroundImage: `url(${jogo.image})` }}
-            >
-              <div className="jogos__card__content">
-                <h3 className="jogos__card__title">{jogo.nome}</h3>
+            <div className="jogos__wrapper" key={index}>
+              {jogo.emBreve && <span className="jogos__ribbon">Em Breve</span>}
 
-                {jogo.emBreve ? (
-                  <span className="jogos__card__tag">Em breve</span>
-                ) : (
-                  <button className="jogos__card__button">Participar</button>
-                )}
+              <div
+                className={`jogos__card ${
+                  jogo.emBreve ? "jogos__card--embreve" : ""
+                }`}
+                style={{ backgroundImage: `url(${jogo.image})` }}
+              >
+                <div className="jogos__card__content">
+                  <h3 className="jogos__card__title">{jogo.nome}</h3>
+                  {jogo.emBreve ? (
+                    <span className="jogos__card__tag">Em breve</span>
+                  ) : (
+                    <button className="jogos__card__button">Participar</button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
