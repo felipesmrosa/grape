@@ -1,6 +1,7 @@
 $branco: #fff;
 $preto: #000;
 $roxo: #4e008e;
+$backgroundBody: #120565;
 $roxoTransparente: rgba(78, 0, 142, 0.9);
 $boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
 
@@ -9,6 +10,10 @@ $boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: $backgroundBody;
 }
 
 .sistema {
@@ -73,6 +78,12 @@ $boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
               letter-spacing: 1px;
               border-radius: 12px;
               box-shadow: $boxShadow;
+              transition: all 0.2s ease-in-out;
+
+              &:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+              }
             }
           }
         }
@@ -119,4 +130,7 @@ $boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
     }
   }
 
+  main {
+    padding: 0 150px;
+  }
 }
