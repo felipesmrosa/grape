@@ -1,3 +1,9 @@
+$branco: #fff;
+$preto: #000;
+$roxo: #4e008e;
+$roxoTransparente: rgba(78, 0, 142, 0.9);
+$boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +23,60 @@
       height: 100vh;
 
       &__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
 
-        img {
-          width: 100%;
-          max-width: 150px;
+        &__nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 16px 150px;
+
+          img {
+            width: 100%;
+            max-width: 150px;
+          }
         }
+
+        &__conteudo {
+          width: 100%;
+          min-height: calc(100vh - 80px); // se tiver header fixo, senão use 100vh
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding: 0 150px;
+
+          span {
+            max-width: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1 {
+              color: $branco;
+              font-size: 42px;
+              font-weight: 800;
+            }
+
+            p {
+              font-size: 18px;
+              color: $branco;
+              margin: 8px 0px 22px 0px;
+            }
+
+            button {
+              background-color: $roxo;
+              padding: 14px 36px;
+              font-size: 14px;
+              color: $branco;
+              border: none;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              border-radius: 12px;
+              box-shadow: $boxShadow;
+            }
+          }
+        }
+
       }
     }
   }
@@ -36,5 +88,35 @@
     gap: 48px;
     font-size: 20px;
     text-transform: uppercase;
+    background-color: $roxoTransparente;
+    padding: 10px 28px;
+    border-radius: 28px;
+    box-shadow: $boxShadow;
+
+    a {
+      position: relative;
+      color: $branco;
+      text-decoration: none;
+      user-select: none;
+      font-size: 18px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 3px; // ajusta a distância do underline
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $branco;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
   }
+
 }
