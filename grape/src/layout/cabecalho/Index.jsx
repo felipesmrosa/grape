@@ -18,7 +18,7 @@ export function Cabecalho() {
                 dinheiro
               </h1>
               <p>Participe dos jogos mais populares e ganhe muito.</p>
-              <button>Participar</button>
+              <button>Teste Vercel Privado</button>
             </span>
           </div>
         </div>
