@@ -1,9 +1,15 @@
-import { Banner } from "./banner/Index";
+import { Menu } from "../menu/Index";
+import logo from "../../../public/logo50.png";
 
 export function Cabecalho() {
   return (
-    <div>
-      <Banner />
+    <div className="cabecalho">
+      <div className="cabecalho__banner">
+        <div className="cabecalho__banner__container">
+          <img src={logo} alt="" />
+          <Menu />
+        </div>
+      </div>
     </div>
   );
 }

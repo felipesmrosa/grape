@@ -4,13 +4,14 @@ import { Menu } from "./menu/Index";
 
 export function Layout() {
   return (
-    <div>
+    <div className="sistema">
       <Cabecalho />
-      <Menu />
 
       <main>
         <Outlet />
       </main>
+
+      {/* <Footer /> */}
     </div>
   );
 }
