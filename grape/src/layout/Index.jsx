@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Cabecalho } from "./cabecalho/Index";
+import { Rodape } from "./rodape/Index";
 
 export function Layout() {
   return (
@@ -10,7 +11,7 @@ export function Layout() {
         <Outlet />
       </main>
 
-      {/* <Footer /> */}
+      <Rodape />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Menu } from "../menu/Index";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logoHorizontal.png";
 
 export function Cabecalho() {
   return (

@@ -1,7 +1,8 @@
 $branco: #fff;
 $preto: #000;
 $roxo: #4e008e;
-$backgroundBody: #120565;
+$footer: #38006b;
+$backgroundBody: #2d035e;
 $roxoTransparente: rgba(78, 0, 142, 0.9);
 $boxShadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
 
@@ -34,17 +35,19 @@ body {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 14px 0px 14px 150px;
+          padding: 0px 0px 0px 150px;
 
           img {
             width: 100%;
-            max-width: 220px;
+            max-width: 300px;
           }
         }
 
         &__conteudo {
           width: 100%;
-          min-height: calc(100vh - 80px); // se tiver header fixo, senão use 100vh
+          min-height: calc(
+            100vh - 80px
+          ); // se tiver header fixo, senão use 100vh
           display: flex;
           align-items: center;
           justify-content: start;
@@ -87,7 +90,6 @@ body {
             }
           }
         }
-
       }
     }
   }
@@ -114,7 +116,7 @@ body {
       font-size: 18px;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 3px; // ajusta a distância do underline
         left: 0;
@@ -135,4 +137,102 @@ body {
   main {
     padding: 0 150px;
   }
+
+  .footer {
+    background-color: $footer;
+    color: $branco;
+    padding: 24px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 36px;
+
+    &__section {
+      flex: 1 1 200px;
+    }
+
+    &__brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 100%;
+        max-width: 220px;
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__icons {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 12px;
+      margin-bottom: 24px;
+
+      svg {
+        background-color: $roxo;
+        border-radius: 50%;
+        padding: 12px;
+        box-shadow: $boxShadow;
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &__payments img {
+      height: 25px;
+      margin-right: 0.5rem;
+    }
+
+    &__language {
+      margin-top: 1rem;
+
+      select {
+        padding: 0.5rem;
+        background: #fff;
+        color: #000;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.tituloSection {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
+  color: $branco;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 12px;
+  margin-top: 64px;
 }
