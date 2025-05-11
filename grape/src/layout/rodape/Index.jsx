@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../public/favicon.png";
 import pix from "@/assets/images/pix.webp";
 import visa from "@/assets/images/visa.png";
-import mastercard from "@/assets/images/mastercard.png";
+import mastercard from "@/assets/images/masterCard.png";
 
 import {
   faInstagram,
